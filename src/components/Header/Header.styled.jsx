@@ -42,6 +42,16 @@ export const HeaderNav = styled.nav`
   }
 `;
 
+export const HeaderNavTabDesk = styled.div`
+  display: none;
+
+  ${device.tablet} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
+
 export const Link = styled(NavLink)`
   display: flex;
   align-items: baseline;
@@ -54,4 +64,10 @@ export const Link = styled(NavLink)`
 export const Logo = styled.span`
   display: flex;
   align-items: center;
+`;
+
+export const MenuBtn = styled.button`
+  ${device.tablet} {
+    display: none;
+  }
 `;

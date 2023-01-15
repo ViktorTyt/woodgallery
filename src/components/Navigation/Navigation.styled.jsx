@@ -8,10 +8,13 @@ export const Wrapper = styled.div`
 
   ${device.tablet} {
     margin-left: 8px;
+    flex-direction: row;
+    width: 360px;
   }
 
   ${device.desktop} {
     margin-left: 28px;
+    width: 660px;
   }
 `;
 

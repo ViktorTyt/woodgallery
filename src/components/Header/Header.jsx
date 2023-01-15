@@ -1,4 +1,3 @@
-import AuthNav from "components/AuthNav";
 import MobHeaderMenu from "components/MobHeaderMenu/MobHeaderMenu";
 import Navigation from "components/Navigation/Navigation";
 // import { theme, size, device } from "styles";
@@ -11,6 +10,8 @@ import {
   HeaderNav,
   Link,
   Logo,
+  MenuBtn,
+  HeaderNavTabDesk,
 } from "./Header.styled";
 
 const Header = () => {
@@ -27,16 +28,16 @@ const Header = () => {
           <Logo>Wood Gallery</Logo>
         </Link>
         <HeaderNav>
-          {!isMobMenuOpen && <button onClick={handleMenu}>Menu</button>}
+          {!isMobMenuOpen && <MenuBtn onClick={handleMenu}>Меню</MenuBtn>}
 
           {isMobMenuOpen && (
             <MobHeaderMenu onMenu={handleMenu}>
-              <Navigation isMobMenuOpen />
-              <AuthNav isMobMenuOpen />
+              <Navigation />
             </MobHeaderMenu>
           )}
-          {!isMobMenuOpen && <Navigation />}
-          {isMobMenuOpen && <AuthNav />}
+          <HeaderNavTabDesk>
+            {!isMobMenuOpen && <Navigation />}
+          </HeaderNavTabDesk>
         </HeaderNav>
       </HeaderContainer>
     </HeaderStyled>
