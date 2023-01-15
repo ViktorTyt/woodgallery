@@ -9,9 +9,9 @@ export const device = {
   tablet: `@media screen and (min-width: ${size.tablet})`,
   desktop: `@media screen and (min-width: ${size.desktop})`,
 
-  mobileOnly: `@media screen and (max-width: 767.99px)`,
-  tabletOnly: `@media screen and (min-width: ${size.tablet}) and (max-width: 1279.99px)`,
-  notDesktop: `@media screen and (max-width: 1279.99px)`,
+  mobileOnly: `@media screen and (max-width: 767.9px)`,
+  tabletOnly: `@media screen and (min-width: ${size.tablet}) and (max-width: 1279.9px)`,
+  notDesktop: `@media screen and (max-width: 1279.9px)`,
 };
 
 export const retina =

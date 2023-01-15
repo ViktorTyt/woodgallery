@@ -1,15 +1,16 @@
-import styled, { css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 // import { theme } from "styles";
 import { NavLink } from "react-router-dom";
 
 export const Wrapper = styled.div`
   display: flex;
-  @media screen and (max-width: 767.9px) {
-    flex-direction: column;
-  }
+  flex-direction: column;
+  gap: 12px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1280px) {
     margin-left: auto;
+    flex-direction: row;
   }
 `;
 
@@ -19,7 +20,6 @@ export const Link = styled(NavLink)`
   border-radius: 3px;
   border: 2px solid palevioletred;
   color: palevioletred;
-  margin: 0.5em 1em;
   padding: 0.25em 1em;
 
   ${(props) =>

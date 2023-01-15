@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { theme, size, device } from "styles";
 
 export const HeaderStyled = styled.header`
@@ -13,7 +13,10 @@ export const HeaderStyled = styled.header`
 export const HeaderContainer = styled.div`
   width: ${size.mobile};
   margin: 0 auto;
-  padding: 12px 15px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   ${device.tablet} {
     width: ${size.tablet};
@@ -24,17 +27,31 @@ export const HeaderContainer = styled.div`
   }
 `;
 
-export const HeaderNav = styled.div`
+export const HeaderNav = styled.nav`
   display: flex;
   flex-wrap: no-wrap;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-between;
+
+  ${device.mobileOnly} {
+    padding: 8px 0;
+  }
+
+  ${device.desktop} {
+    align-items: baseline;
+  }
 `;
 
 export const Link = styled(NavLink)`
   display: flex;
-  align-items: center;
+  align-items: baseline;
   color: gray;
+  font-style: italic;
   font-weight: 700;
   font-size: 28px;
+`;
+
+export const Logo = styled.span`
+  display: flex;
+  align-items: center;
 `;
