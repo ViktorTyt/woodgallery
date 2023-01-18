@@ -1,3 +1,4 @@
+import MainVideo from "components/MainVideo";
 import MobHeaderMenu from "components/MobHeaderMenu/MobHeaderMenu";
 import Navigation from "components/Navigation/Navigation";
 // import { theme, size, device } from "styles";
@@ -22,25 +23,28 @@ const Header = () => {
 
   console.log(isMobMenuOpen);
   return (
-    <HeaderStyled>
-      <HeaderContainer>
-        <Link to="/" id="logo" href="." rel="home">
-          <Logo>Wood Gallery</Logo>
-        </Link>
-        <HeaderNav>
-          {!isMobMenuOpen && <MenuBtn onClick={handleMenu}>Меню</MenuBtn>}
+    <>
+      <HeaderStyled>
+        <HeaderContainer>
+          <Link to="/" id="logo" href="." rel="home">
+            <Logo>Wood Gallery</Logo>
+          </Link>
+          <HeaderNav>
+            {!isMobMenuOpen && <MenuBtn onClick={handleMenu}>Меню</MenuBtn>}
 
-          {isMobMenuOpen && (
-            <MobHeaderMenu onMenu={handleMenu}>
-              <Navigation />
-            </MobHeaderMenu>
-          )}
-          <HeaderNavTabDesk>
-            {!isMobMenuOpen && <Navigation />}
-          </HeaderNavTabDesk>
-        </HeaderNav>
-      </HeaderContainer>
-    </HeaderStyled>
+            {isMobMenuOpen && (
+              <MobHeaderMenu onMenu={handleMenu}>
+                <Navigation />
+              </MobHeaderMenu>
+            )}
+            <HeaderNavTabDesk>
+              {!isMobMenuOpen && <Navigation />}
+            </HeaderNavTabDesk>
+          </HeaderNav>
+        </HeaderContainer>
+      </HeaderStyled>
+      <MainVideo />
+    </>
   );
 };
 
